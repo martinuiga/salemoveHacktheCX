@@ -10,15 +10,15 @@ $(document).ready(function() {
         uneditable.setTheme("ace/theme/textmate");
         uneditable.session.setMode("ace/mode/javascript");
         uneditable.setReadOnly(true);
-        uneditable.setOption("maxLines", 10);
-        uneditable.setOption("minLines", 10);
+        uneditable.setOption("maxLines", 3);
+        uneditable.setOption("minLines", 3);
         
         var output = ace.edit("output");
         output.renderer.setShowGutter(false);
         output.session.setMode("ace/mode/javascript");
         output.setReadOnly(true);
-        output.setOption("maxLines", 7);
-        output.setOption("minLines", 7);
+        output.setOption("maxLines", 1);
+        output.setOption("minLines", 1);
         //output.editor.setShowPrintMargin(false); // ei näita rea numbreid
         
         
@@ -78,11 +78,11 @@ $(document).ready(function() {
             
             //testing answers
             if(ans1 == 25 && ans2 == 1) {
-                $("#code1").css('background-color','green');
-                $("#code1").html('Correct!');
+                //$("#code1").css('background-color','green');
+                $("#code1").html('<img src="img/check.png" style="width:32px; height:32px; vertical-align:middle"/><b>  Correct!</b>');
             }else {
-                $("#code1").css('background-color','red');
-                $("#code1").html('Incorrect! Try Again!');
+                //$("#code1").css('background-color','red');
+                $("#code1").html('<img src="img/cross.png" style="width:32px; height:32px; vertical-align:middle"/><b>  Incorrect! Please try again!</b>');
             }
             ans1 = "";
             ans2 = "";
@@ -94,15 +94,15 @@ $(document).ready(function() {
         uneditable2.setTheme("ace/theme/textmate");
         uneditable2.session.setMode("ace/mode/javascript");
         uneditable2.setReadOnly(true);
-        uneditable2.setOption("maxLines", 10);
-        uneditable2.setOption("minLines", 10);
+        uneditable2.setOption("maxLines", 6);
+        uneditable2.setOption("minLines", 6);
         
         var output2 = ace.edit("output2");
         output2.renderer.setShowGutter(false);
         output2.session.setMode("ace/mode/javascript");
         output2.setReadOnly(true);
-        output2.setOption("maxLines", 7);
-        output2.setOption("minLines", 7);
+        output2.setOption("maxLines", 1);
+        output2.setOption("minLines", 1);
         //output.editor.setShowPrintMargin(false); // ei näita rea numbreid
         
         
@@ -165,11 +165,11 @@ $(document).ready(function() {
             
             //testing answers
             if(ans3 == true && ans4 == false) {
-                $("#code2").css('background-color','green');
-                $("#code2").html('Correct!');
+                //$("#code2").css('background-color','green');
+                $("#code2").html('<img src="img/check.png" style="width:32px; height:32px; vertical-align:middle"/><b>  Correct!</b>');
             }else {
-                $("#code2").css('background-color','red');
-                $("#code2").html('Incorrect! Try Again!');
+                //$("#code2").css('background-color','red');
+                $("#code2").html('<img src="img/cross.png" style="width:32px; height:32px; vertical-align:middle"/><b>  Incorrect! Please try again!</b>');
             }
             ans3 = "";
             ans4 = "";

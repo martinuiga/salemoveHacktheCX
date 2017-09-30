@@ -1,50 +1,294 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-<title>ACE in Action</title>
-<style type="text/css" media="screen">
-    #editor { 
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 50px;
-        left: 0;
-    }
-    
-    #selector {
-        position: relative;
-    }
-    
-</style>
-</head>
-<body>
-<div>
-    <div id="editor">function foo(items) {
-        var x = "All this is syntax highlighted";
-        return x;
+    <meta charset="UTF-8">
+    <title>SaleMove Programming Courses</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/layout-style.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+
+
+    <style type="text/css" media="screen">
+        .ace_editor {
+            border: 1px solid lightgray;
+            margin: auto;
+            height: 200px;
+            /*max-width: 60%;*/
+            left: 0px;
+            /*width: 80%;*/
         }
+
+        .scrollmargin {
+            height: 80px;
+            text-align: center;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        .sidebar.pure-u-1.pure-u-md-1-4.engagement {
+            width: 22%;
+        }
+    </style>
+
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.min.js" type="text/javascript" charset="utf-8"></script>-->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="//api.salemove.com/salemove_integration.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.8/ace.js" type="text/javascript" charset="utf-8"></script>
+
+
+</head>
+
+<body>
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+        <div class="header">
+            <h1 class="brand-title">Salemove Hackathon</h1>
+            <h2 class="brand-tagline">Learn programming languages</h2>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="pure-button" href="/index.html">Javascript</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="pure-button" href="/pages/page2.html">Java</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="pure-button" href="/pages/page2.html">Python</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="pure-button" href="/pages/page2.html">HTML</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="pure-button" href="/pages/page2.html">Ruby</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="pure-button" href="/pages/page2.html">PHP</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </div>
-        
-    <div id="selector">
-        <select id="themeselector" name="selectname">
-            <option value="twilight" id="valid1" selected="selected"> Twilight </option>
-            <option value="monokai" id="valid2"> Monokai </option>
-            <option value="eclipse" id="valid2"> Eclipse </option>
-        </select>
-        
-        <select id="languageselector" name="selectlanguage">
-            <option value="javascript" id="valid1" selected="selected"> Javascript </option>
-            <option value="java" id="valid2"> Java </option>
-            <option value="python" id="valid2"> Python </option>
-        </select>
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            <div class="posts">
+                <h1 class="content-subhead">Learn programming: Javascript</h1>
+
+
+                <section class="post">
+                    <header class="post-header">
+                        <h2 class="post-title">Functions</h2>
+                    </header>
+
+
+                    <div class="post-description">
+                        <p>
+                            Functions are one of the fundamental building blocks in JavaScript. A function is a 
+                            JavaScript procedure—a set of statements that performs a task or calculates a value. 
+                        </p>
+                    </div>
+                </section>
+
+                <section class="post">
+                    <h1 class="content-subhead">Javascript functions</h1>
+                    <header class="post-header">
+                        <h2 class="post-title">Example</h2>
+                    </header>
+
+
+                    <div class="post-description">
+                        <p>
+                            To use a function, you must define it somewhere in the scope from which you wish to call it.
+                        </p>
+                        <p>
+                            A function definition (also called a function declaration, or function statement) consists of the function keyword, followed by:
+                            <ul>
+                                <li>The name of the function.</li>
+                                <li>A list of parameters to the function, enclosed in parentheses and separated by commas.</li>
+                                <li>The JavaScript statements that define the function, enclosed in curly brackets, { }.</li>
+                            </ul>
+                            For example, the following code defines a simple function named <b>square</b>:
+                        </p>
+
+                        <pre id="uneditable">
+function square(number) {
+    return number * number;
+}</pre>
+
+
+                        <p>
+                            Now if we call the function <b>square(3)</b>, then the output would be:
+                        </p>
+
+                        <pre id="output">
+9
+                        </pre>
+
+                    </div>
+                </section>
+
+            </div>
+
+            <div class="posts">
+                <h1 class="content-subhead">Try it yourself!</h1>
+                <p>
+                    Write a function <b>multiply</b> that takes two arguments and returns their multiplication.
+                </p>
+
+                <section class="post">
+                    <header class="post-header">
+
+                        <pre id="editor" class="sm_cobrowsing_hidden_field"></pre>
+                        <!--<div class="scrollmargin"></div>-->
+                        
+                        <div>
+                            <label for="themeselector">Code Theme</label>
+                            <select id="themeselector" name="selectname" class="pure-input-1-2">
+                                <option value="merbivore" id="valid1" > Merbivore </option>
+                                <option value="textmate" id="valid1" selected="selected"> Textmate </option>
+                                <option value="monokai" id="valid2"> Monokai </option>
+                                <option value="eclipse" id="valid2"> Eclipse </option>
+                            </select>
+                        </div>
+                        <div id="code1" style="height: 34px"> </div>
+                        <div>
+                            <!--<div class="salemove-button">asdasd</div>-->
+                            
+                            <button id="runCode1">Check</button>
+                            
+                            
+                        </div>
+                        
+                        <div>
+                            <textarea type="textarea" name="" id="custText" class="hidden"></textarea>
+                            
+                        </div>
+
+                    </header>
+
+                </section>
+
+            </div>
+            
+<!-- ##################################################################################################### -->
+            
+            <div class="posts">
+                
+                <section class="post">
+                    <header class="post-header">
+                        <h2 class="post-title">If...Else Statements</h2>
+                    </header>
+
+
+                    <div class="post-description">
+                        <p>
+                            Conditional statements are used to perform different actions based on different conditions.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="post">
+                    <h1 class="content-subhead">Conditional statements</h1>
+                    <header class="post-header">
+                        <h2 class="post-title">Example</h2>
+                    </header>
+
+
+                    <div class="post-description">
+                        <p>
+                            Very often when you write code, you want to perform different actions for different decisions.
+                        </p>
+                        <p>
+                            You can use conditional statements in your code to do this.
+                        </p>
+                        <p>
+                            In JavaScript we have the following conditional statements:
+                            <ul>
+                                <li>Use <b>if</b> to specify a block of code to be executed, if a specified condition is true</li>
+                                <li>Use <b>else</b> to specify a block of code to be executed, if the same condition is false</li>
+                                <li>Use <b>else if</b> to specify a new condition to test, if the first condition is false</li>
+                                <li>Use <b>switch</b> to specify many alternative blocks of code to be executed</li>
+                            </ul>
+                        </p>
+                        <p>
+                            Let's write a simple if...else statement:
+                        </p>
+
+                        <pre id="uneditable2">
+if (5 < 10) {
+    statement =  "Everything is running smoothly!";
+} 
+else { 
+    statement = "Something is terribly wrong here";
+}</pre>
+
+                        <p>
+                            If we were to run this code, we would get:
+                        </p>
+
+                        <pre id="output2">
+Everything is running smoothly!</pre>
+
+                    </div>
+                </section>
+
+            </div>
+
+            
+            <div class="posts">
+                <h1 class="content-subhead">
+                    Try it yourself!
+                </h1>
+                <p>
+                    Write a function <b>isEqual</b> that takes two numbers as arguments and returns true if they are equal and false if they are not equal.
+                </p>
+
+                <section class="post">
+                    <header class="post-header">
+
+                        <pre id="editor2" class="sm_cobrowsing_hidden_field"></pre>
+                        <!--<div class="scrollmargin"></div>-->
+                        
+                        <div>
+                            <label for="themeselector">Code Theme</label>
+                            <select id="themeselector" name="selectname2" class="pure-input-1-2">
+                                <option value="merbivore" id="valid1" > Merbivore </option>
+                                <option value="monokai" id="valid2"> Monokai </option>
+                                <option value="textmate" id="valid1" selected="selected"> Textmate </option>
+                                <option value="eclipse" id="valid2"> Eclipse </option>
+                            </select>
+                        </div>
+                        <div id="code2" style="height: 34px"> </div>
+                        <div>
+                            <!--<div class="salemove-button">asdasd</div>-->
+                            
+                            <button id="runCode2">Check</button>
+                            
+                            
+                        </div>
+                        
+                        <div>
+                            <textarea type="textarea" name="" id="custText2" class="hidden"></textarea>
+                            
+                        </div>
+
+                    </header>
+
+                </section>
+
+            </div>
+        </div>
     </div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.8/ace.js" type="text/javascript" charset="utf-8"></script>
-
 <script type="text/javascript" src="js/aceEditor.js"></script>
-
 </body>
+
 </html>
