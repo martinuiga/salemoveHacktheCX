@@ -1,0 +1,55 @@
+            // var data = { externalId: "AC01986" };
+
+            // sm.getApi({version: 'v1'}).then( salemove => {
+            //   salemove.updateInformation(data).then(() => {
+            //     console.log('success sending custom attribute to salemove');
+            //   }).catch( error => {
+            //     console.log('error sending custom attribute to salemove');
+            //   });
+            // });
+            
+            
+            // var siteId = "32692139-e020-40f4-9bdc-d4da5f237591";
+            // var externalId="AC01986";
+            // var url = "https://omnibrowse.salemove.com/sites/" + siteId +"/visitors?external_id=" + externalId;
+            // var token = "";
+            // fetch(url, {
+            //     method: 'get',
+            //     headers: {
+            //       'Content-type': 'application/x-www-form-urlencoded',
+            //       'Authorization': 'Token '+ token
+            //     }
+            //   }
+            // )
+            // .then( response => {
+            //   if (response.status >= 200 && response.status < 300) {
+            //     return Promise.resolve(response);
+            //   } else {
+            //     return Promise.reject(new Error(response.statusText));
+            //   }
+            // })
+            // .then(response => response.json())
+            // .then(data => { data.map( visitor => console.log(visitor)) })
+            // .catch(error => console.log(error))
+            
+            
+            // var url = "https://omnibrowse.salemove.com/auth/token";
+            // var token = "SWUq2QjhxbBzBezCsuFJ4w";
+            // fetch(url, {
+            //   method: 'post',
+            //   headers: {
+            //     'Content-type': 'application/x-www-form-urlencoded'
+            //   },
+            //   body: ('api_token=' + token)
+            // })
+            // .then(response => {
+            //   if (response.status >= 200 && response.status < 300) {
+            //     return Promise.resolve(response);
+            //   } else {
+            //     return Promise.reject(new Error(response.statusText));
+            //   }
+            // })
+            // .then(response => response.json())
+            // .then(launchToken => console.log(launchToken))
+            // .catch(error => console.log(error))
+            

@@ -1,0 +1,93 @@
+Content options:
+1. "Hello world" in x languages.
+2. Defining function and calling it in x languages.
+3. Multiple tasks for 1 language.
+
+Probably better to limit the number of languages (less thinking, less complex)
+
+For each language:
+1. Intro
+2. Example
+3. Task
+
+str = "Hello world!"
+def f(x):
+    print(x)
+f(str)
+
+Write a function 
+
+
+var myVariable;
+
+myVariable = 'Bob';
+
+myVariable;
+
+Conditionals
+
+var iceCream = 'chocolate';
+if (iceCream === 'chocolate') {
+  alert('Yay, I love chocolate ice cream!');    
+} else {
+  alert('Awwww, but chocolate is my favorite...');    
+}
+
+Functions
+
+function multiply(num1,num2) {
+  var result = num1 * num2;
+  return result;
+}
+
+multiply(4,7);
+
+Write a function "multiply" that takes two arguments and returns their multiplication.
+
+function multiply(num1,num2) {
+  var result = num1 * num2;
+  return result;
+}
+
+Write a function "isEqual" that takes two numbers as arguments and returns true if they are equal and false if they are not equal.
+
+function isEqual(num1,num2) {
+    if (num1 == num2){
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+Write a function "isEqual" that takes two numbers as arguments and returns true if they are equal and false if they are not equal.
+
+function isEqual(num1,num2) {
+    if (num1 == num2){
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+
+Write two functions "isEqual" and "multiplyIfEqual". You can use "isEqual"
+
+function isEqual(num1,num2) {
+    if (num1 == num2){
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+function multiplyIfEqual(num1,num2) {
+    if (isEqual(num1,num2)){
+        return num1 * num2;
+    }
+    else {
+        return "not equal numbers";
+    }
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/layout-style.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+
+
+    <style type="text/css" media="screen">
+        .ace_editor {
+            border: 1px solid lightgray;
+            margin: auto;
+            height: 200px;
+            /*max-width: 60%;*/
+            left: 0px;
+            /*width: 80%;*/
+        }
+
+        .scrollmargin {
+            height: 80px;
+            text-align: center;
+        }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.min.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="//api.salemove.com/salemove_integration.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.8/ace.js" type="text/javascript" charset="utf-8"></script>
+
+
+</head>
+
+<body>
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+        <div class="header">
+            <h1 class="brand-title">Salemove Hackathon</h1>
+            <h2 class="brand-tagline">Learn programming languages</h2>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="pure-button" href="/pages/page1.html">Python</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="pure-button" href="/page/page2.html">Java</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="pure-button" href="/page/page2.html">Javascript</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="pure-button" href="/page/page2.html">HTML</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="pure-button" href="/page/page2.html">Ruby</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="pure-button" href="/page/page2.html">PHP</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            <!-- A wrapper for all the blog posts -->
+            <div class="posts">
+                <h1 class="content-subhead">Learn programming: Python</h1>
+
+
+                <section class="post">
+                    <header class="post-header">
+                        <h2 class="post-title">1. Introduction</h2>
+                    </header>
+
+
+                    <div class="post-description">
+                        <p>
+                            Python is an easy to learn programming language. You can use it to create web apps, games, even a search engine!
+                        </p>
+                        <p>
+                            Ready to learn Python?
+                        </p>
+                    </div>
+                </section>
+
+                <section class="post">
+                    <h1 class="content-subhead">Basics</h1>
+                    <header class="post-header">
+                        <h2 class="post-title">Hello, World!</h2>
+                    </header>
+
+
+                    <div class="post-description">
+                        <p>
+                            First off, we will start by printing "Hello, World!" on screen by using the <mark>print</mark> function. To do this, simply write:
+
+                        </p>
+
+                        <pre id="uneditable">
+print("Hello, World!")</pre>
+
+
+                        <p>
+                            Output:
+
+                        </p>
+
+                        <pre id="output">
+Hello, World!
+</pre>
+
+                    </div>
+                </section>
+
+            </div>
+
+            <div class="posts">
+                <h1 class="content-subhead">Try it yourself!</h1>
+
+                <section class="post">
+                    <header class="post-header">
+
+                        <pre id="editor" class="sm_cobrowsing_hidden_field"></pre>
+                        <div class="scrollmargin"></div>
+                        <div>
+                            <select id="themeselector" name="selectname">
+                                <option value="twilight" id="valid1" selected="selected"> Twilight </option>
+                                <option value="monokai" id="valid2"> Monokai </option>
+                                <option value="eclipse" id="valid2"> Eclipse </option>
+                            </select>
+                        </div>
+                        <!--<div>-->
+                        <!--    <div class="salemove-button">asdasd</div>-->
+                        <!--    <textarea id="operatorview" placeholder=""></textarea>-->
+                        <!--</div>-->
+
+                    </header>
+
+                </section>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/aceEditor.js"></script>
+</body>
+
+</html>
