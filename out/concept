@@ -36,8 +36,7 @@ if (iceCream === 'chocolate') {
 Functions
 
 function multiply(num1,num2) {
-  var result = num1 * num2;
-  return result;
+  return num1 * num2;
 }
 
 multiply(4,7);
